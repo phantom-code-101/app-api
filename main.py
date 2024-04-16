@@ -12,14 +12,9 @@ def read_root():
 
 @app.get("/.well-known/assetlinks.json")
 def read_assetlinks():
-    json_data = None
-    with open('file_name.txt', 'r') as f:
-        data = f.read()
-        json_data = json.loads(data)
-    return json_data
+    with open('.well-known/assetlinks.json') as f:
+        return json.load(f)
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
-
-    
