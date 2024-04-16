@@ -5,14 +5,13 @@ import json
 
 app = FastAPI()
 
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
-@app.get("/.well-known/assetlinks.json")
-def read_assetlinks():
-    with open('.well-known/assetlinks.json') as f:
+@app.get("/{json_file}")
+def read_assetlinks(json_file: str):
+    with open(json_file) as f:
         return json.load(f)
 
 @app.get("/items/{item_id}")
