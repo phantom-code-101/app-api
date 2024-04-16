@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.vinkt.googlepasskey",
+    "sha256_cert_fingerprints":
+    ["0D:F6:89:C8:F2:6B:8C:47:B5:D7:C1:59:EA:25:EF:A0:F0:20:2C:E8:DD:03:97:79:50:44:60:E8:45:D9:28:DD"]
+  }
+}]
